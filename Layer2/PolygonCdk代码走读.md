@@ -13,7 +13,8 @@
     - 合约polygonZkEVM中会调用datacommitee合约校验batch和签名数据s
 - txData加入到txMgr，最后发给L1，并确认L1已经收到
 ## 2.数据流程
-![polygoncdk-1](./images/polygoncdk-1.png)
+![polygoncdk](./images/polygoncdk.png)
+
 1. sequenceSender将batch数据发送给dac中的每个member, 每个member存储batch数据，并返回自己的签名。
 2. sequenceSender将dac所有member的签名和addr聚合在一起，形成signaturesAndAddrs。
 3. sequenceSender将batch hash、signaturesAndAddrs发送给L1上的合约polygonZkEVM。
